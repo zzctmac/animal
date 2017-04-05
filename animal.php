@@ -10,4 +10,14 @@ $dog = new animal\Dog();
 
 $dog->show();
 
+var_dump($dog instanceof animal\IBase);
+
+class Sheep implements animal\IBase {
+	public function show() {
+		echo "it is sheep\n";
+	}
+}
+
+$s = new Sheep;
+$s->show();
 ?>

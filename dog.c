@@ -6,6 +6,7 @@
 #include "ext/standard/info.h"
 #include "php_animal.h"
 #include "dog.h"
+#include "animal_interface.h"
 
 zend_class_entry *dog_ce;
 
@@ -19,7 +20,9 @@ PHP_MINIT_FUNCTION(dog)
 {
     zend_class_entry ce;
     INIT_CLASS_ENTRY(ce, "animal\\Dog", dog_class_functions);
-    dog_ce = zend_register_internal_class(&ce TSRMLS_CC );
+    dog_ce = zend_register_internal_class_ex(&ce, NULL );
+
+    zend_class_implements(dog_ce, 1, animal_interface_ce);
 
     return SUCCESS;
 }

@@ -59,5 +59,5 @@ if test "$PHP_ANIMAL" != "no"; then
   dnl
   dnl PHP_SUBST(ANIMAL_SHARED_LIBADD)
 
-  PHP_NEW_EXTENSION(animal, dog.c animal.c, $ext_shared,, -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1)
+  PHP_NEW_EXTENSION(animal, animal_interface.c dog.c  animal.c, $ext_shared,, -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1)
 fi
