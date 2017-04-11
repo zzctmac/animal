@@ -34,3 +34,6 @@ tests/*/*.exp
 tests/*/*.log
 tests/*/*.sh
 .vscode
+GPATH
+GRTAGS
+GTAGS

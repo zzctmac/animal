@@ -10,9 +10,9 @@ $dog = new animal\Dog();
 
 $dog->show();
 
-var_dump($dog instanceof animal\IBase);
+var_dump($dog instanceof animal\Animal);
 
-class Sheep implements animal\IBase {
+class Sheep extends animal\Animal {
 	public function show() {
 		echo "it is sheep\n";
 	}
