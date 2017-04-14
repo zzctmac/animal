@@ -10,6 +10,7 @@ $dog = new animal\Dog();
 
 $dog->show();
 
+echo $dog->num . "\n";
 var_dump($dog instanceof animal\Animal);
 
 class Sheep extends animal\Animal {

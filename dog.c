@@ -26,5 +26,7 @@ PHP_MINIT_FUNCTION(dog)
 
 PHP_METHOD(Dog, __construct)
 {
-    php_printf("This is construct\n");
+    zval tpl_var;
+    ZVAL_LONG(&tpl_var, 100);
+    zend_update_property(dog_ce, getThis(), ZEND_STRL(ANIMAL_NUM), &tpl_var);
 }

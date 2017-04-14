@@ -22,6 +22,8 @@ PHP_MINIT_FUNCTION(animal_abstract)
     animal_abstract_ce = zend_register_internal_class_ex(&ce, NULL );
     animal_abstract_ce->ce_flags |= ZEND_ACC_EXPLICIT_ABSTRACT_CLASS;
 
+    zend_declare_property_null(animal_abstract_ce, ZEND_STRL(ANIMAL_NUM), ZEND_ACC_PUBLIC);
+
     zend_class_implements(animal_abstract_ce, 1, animal_interface_ce);
 
     return SUCCESS;
